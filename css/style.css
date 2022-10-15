@@ -1,0 +1,85 @@
+:root {
+  --Big-font: "Chonburi", cursive;
+  --small-font: "League Spartan", sans-serif;
+  --main-color: #e6ddcf;
+  --font-color: black;
+  --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+body {
+  background-color: var(--main-color);
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-family: var(--Big-font);
+  font-size: 80px;
+  text-align: center;
+}
+#con {
+  font-size: 50px;
+}
+#about-me {
+  margin: 0px;
+}
+
+h2 {
+  font-family: var(--small-font);
+  text-align: center;
+  font-size: 35px;
+}
+#from {
+  margin-top: 10px;
+}
+p {
+  text-align: center;
+  font-family: var(--small-font);
+  font-size: 30px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+#about,
+#contact,
+#home,
+#one,
+#two,
+#email {
+  font-family: var(--small-font);
+  margin: 30px;
+  padding: 15px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+}
+
+#one,
+#two {
+  line-height: 30px;
+}
+a#about:hover,
+a#contact:hover,
+a#home:hover,
+a#email:hover {
+  background-color: var(--font-color);
+  color: white;
+  transition: ease-in-out 150ms;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+#email {
+  position: relative;
+  bottom: 50px;
+}
