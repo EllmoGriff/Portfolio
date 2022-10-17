@@ -6,76 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap"
-      rel="stylesheet"
-    />
     <link
       href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Portfolio</title>
   </head>
   <body>
-    <div class="nav">
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar w/ text</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-              Navbar text with an inline element
-            </span>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white p-2 brand" href="index.html">She</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon border-dark"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav text-center">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html#go-to-contact">Contact</a>
           </div>
         </div>
-      </nav>
-    </div>
-    <header>
-      <h1>Hey, Hi, Hello</h1>
-      <h2>Nice to meet you, I'm Elle</h2>
-      <p>Training Front-end developer, based in England</p>
-    </header>
-    <section>
-      <div class="nav-links">
-        <a href="about.html" id="about">About Me</a>
-        <a href="about.html#go-to-contact" id="contact">Contact Me</a>
       </div>
-    </section>
+    </nav>
+    <header class="mt-4">
+      <h1 class="display-flex text-end me-5">
+        <a href="#" class="hey">Hey</a>, <a href="#" class="hi">Hi</a>,
+        <a href="#" class="hello">Hello</a>
+      </h1>
+      <h2>
+        Nice to meet you, I'm Elle
+        <br />
+        <span class="intro-home"
+          >Training Front-end developer, based in England</span
+        >
+      </h2>
+      <h3 class="mx-5 mt-4 text-start">Portfolio</h3>
+    </header>
+
+    <div class="details container text-center mb-4">
+      <div class="row">
+        <div class="col-xl-8">
+          <ul class="text-start">
+            <li>age: <span class="age">26</span></li>
+            <li>Nickname: <span class="nick">Elmo</span></li>
+            <li>from: <span class="from">England, Derby</span></li>
+            <li>Languages: <span class="lang">HTML, CSS, JAVASCRIPT</span></li>
+          </ul>
+          <div class="details-contact">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt,
+            temporibus veniam soluta. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nesciunt, temporibus veniam soluta cum quod earum
+            hic tempora amet repellat necessitatibus vel ipsa, exercitationem
+            magni vitae. Numquam nesciunt rem nisi aut. I would love to hear
+            from you, contact me<a
+              class="nav-link click-here"
+              href="about.html#go-to-contact"
+            >
+              Here</a
+            >
+          </div>
+        </div>
+        <div class="col-xl-4">
+          <img
+            src="images/me.png"
+            alt="me"
+            class="img-fluid mt-4"
+            id="img-of-me"
+          />
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

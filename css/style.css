@@ -1,41 +1,133 @@
 :root {
-  --Big-font: "Chonburi", cursive;
+  --Big-font: "Permanent Marker", cursive;
   --small-font: "League Spartan", sans-serif;
-  --main-color: #e6ddcf;
+  --bold-font: "Josefin Sans", sans-serif;
+  --main-color: #f8f4f0;
+  --mid-color: #d9cab6;
+  --hover-color: #e89161;
   --font-color: black;
   --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--main-color);
-  max-width: 800px;
   margin: auto;
 }
-
+.navbar-brand {
+  background-color: black;
+}
+.navbar-brand:hover {
+  background-color: #e89161;
+  transition: ease-in-out 150ms;
+}
+.navbar a {
+  font-family: var(--small-font);
+  font-size: 20px;
+  color: black;
+}
+.navbar a:hover {
+  color: var(--mid-color);
+}
+a.brand {
+  font-family: var(--bold-font);
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: black;
+}
 h1 {
   font-family: var(--Big-font);
-  font-size: 80px;
+  font-size: 5vmax;
   text-align: center;
 }
-#con {
-  font-size: 50px;
+a.hey,
+a.hello,
+a.hi {
+  text-decoration: none;
+  color: black;
 }
-#about-me {
-  margin: 0px;
+a.hey:hover,
+a.hi:hover,
+a.hello:hover {
+  color: var(--mid-color);
+  transition: ease-in-out 250ms;
 }
-
+h3 {
+  font-size: 6vmax;
+  font-family: var(--bold-font);
+  text-transform: uppercase;
+  font-weight: bold;
+}
 h2 {
   font-family: var(--small-font);
   text-align: center;
-  font-size: 35px;
+  font-size: 2.5vmax;
 }
-#from {
-  margin-top: 10px;
+.intro-home {
+  font-size: 2vmax;
 }
-p {
-  text-align: center;
+.details {
+  max-width: 70%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  padding: 0;
+  list-style: none;
+  font-family: var(--bold-font);
+}
+li {
+  text-transform: uppercase;
+  font-size: 3vmin;
+}
+.age,
+.name,
+.lang,
+.from,
+.nick {
   font-family: var(--small-font);
-  font-size: 30px;
+  text-transform: none;
+}
+
+.details-contact {
+  text-align: start;
+  font-size: 2.5vmin;
+}
+
+#img-of-me {
+  max-width: 60%;
+  border-radius: 500px 500px 0 0;
+}
+.quote {
+  font-family: var(--small-font);
+  font-size: 3vmin;
+}
+.click-here {
+  font-family: var(--Big-font);
+  display: inline;
+}
+
+#about-header {
+  font-size: 5vmax;
+  margin: 0px;
+  font-family: var(--bold-font);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.intro-from {
+  margin-top: 10px;
+  font-family: var(--small-font);
+  font-size: 4vmin;
+}
+.intro-about {
+  font-size: 3vmin;
+}
+
+.contact-header {
+  font-size: 3vmax;
+  font-family: var(--Big-font);
 }
 
 .nav-links {
@@ -43,43 +135,42 @@ p {
   justify-content: center;
 }
 
-#about,
-#contact,
-#home,
-#one,
-#two,
+.project-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.weatherapp-title {
+  font-family: var(--Big-font);
+  font-size: 6vmin;
+}
+
+#weatherapp-img {
+  max-width: 280px;
+}
+.weather-app-desc {
+  font-family: var(--small-font);
+  font-size: 2.5vmin;
+}
+#weatherapp-rain-img {
+  max-width: 275px;
+}
+
 #email {
   font-family: var(--small-font);
+  max-width: 300px;
   margin: 30px;
-  padding: 15px;
-  border: 2px solid black;
+  padding: 10px;
   background-color: white;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
   text-decoration: none;
   border-radius: 50px;
   box-shadow: var(--shadow);
 }
 
-#one,
-#two {
-  line-height: 30px;
-}
-a#about:hover,
-a#contact:hover,
-a#home:hover,
 a#email:hover {
-  background-color: var(--font-color);
+  background-color: var(--hover-color);
   color: white;
   transition: ease-in-out 150ms;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-}
-
-#email {
-  position: relative;
-  bottom: 50px;
 }
