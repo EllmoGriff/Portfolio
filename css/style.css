@@ -9,7 +9,6 @@
   --clr-neutral-200: #d9cab6;
   --clr-primary-400: #676a14;
   --clr-neutral-900: black;
-  --clr-primary-300: #e89161;
 
   --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
@@ -28,7 +27,10 @@ body {
   font-family: var(--ff-primary);
   color: black;
 }
-
+.hero {
+  background-color: var(--clr-neutral-100);
+  max-width: 100vw;
+}
 .project-page {
   background-color: var(--clr-neutral-100);
   height: 100vh;
@@ -81,34 +83,30 @@ h1 {
   font-size: clamp(3rem, 1rem + 10vw, 10rem);
 }
 .contact-page h1 {
-  font-size: clamp(3rem, 1rem + 10vw, 15rem);
+  font-size: clamp(6.25rem, 1rem + 10vw, 15rem);
   writing-mode: vertical-rl;
-  margin-block-end: auto;
+  margin-block-end: 0;
+  text-align: center;
 }
 .hey-hi-hello h1 {
   margin-top: 1.25em;
 }
 
-h3 {
-  font-size: clamp(0.25rem, 1rem + 10vw, 4rem);
-  font-family: var(--ff-bold-primary);
-}
-.im {
-  font-size: clamp(0.2rem, 1rem + 10vw, 4rem);
-  font-family: var(--ff-bold-primary);
-}
 .home-text {
   margin-top: 2em;
 }
 .line-three {
   max-width: 90%;
-  margin: 0em 2em;
+  margin: auto;
   display: flex;
   gap: 2em;
 }
-
+.im {
+  font-size: clamp(0.2rem, 1rem + 10vw, 4rem);
+  font-family: var(--ff-bold-primary);
+}
 .elle {
-  font-size: clamp(3rem, 1rem + 10vw, 25rem);
+  font-size: clamp(6rem, 1rem + 10vw, 25rem);
   font-family: var(--ff-serif);
   text-decoration: underline;
   text-decoration-color: var(--clr-primary-400);
@@ -130,7 +128,7 @@ h3 {
 h2 {
   margin-top: 0.5em;
   font-family: var(--ff-bold-primary);
-  font-size: clamp(4rem, 1rem + 10vw, 12rem);
+  font-size: clamp(2rem, 1rem + 10vw, 12rem);
 }
 .nice-to-meet-you {
   text-align: center;
@@ -142,14 +140,6 @@ p {
   text-align: start;
   line-height: 1.5;
 }
-#img-of-me {
-  max-width: 18rem;
-  /* clip-path: circle(); */
-  border-radius: 500px 500px 0px 0px;
-  position: relative;
-  bottom: 2.5em;
-  left: 5em;
-}
 
 h5 {
   font-size: 4rem;
@@ -158,11 +148,10 @@ h5 {
   text-align: start;
 }
 
-.project-one-grid {
+.project-grid {
   max-width: 80%;
   margin: auto;
   display: grid;
-  gap: 1.5rem;
   border-bottom: solid #676a14 6px;
   color: #231f1c;
 }
@@ -173,13 +162,14 @@ h5 {
 }
 
 @media (min-width: 60em) {
-  .project-one-grid {
+  .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-.p-one-num {
+.project-num,
+.project-num-2 {
   text-align: center;
-  font-size: clamp(16rem, 1rem + 10vw, 20rem);
+  font-size: clamp(8rem, 1rem + 10vw, 20rem);
   font-family: var(--ff-primary);
   margin: auto;
 }
@@ -189,24 +179,57 @@ h5 {
   margin: auto;
 }
 
-.p-one-para {
-  writing-mode: vertical-rl;
-  display: inline;
-}
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-}
-
 .contact-page {
-  margin-top: 6em;
-  max-width: 90%;
-
+  margin-top: 1em;
+  max-width: 90vw;
+  height: 89vh;
+  display: flex;
   border: 6px #676a14 solid;
 }
 
-#email {
+@media (max-width: 30em) {
+  h1 {
+    text-align: center;
+  }
+  .im-elle {
+    margin-top: 2em;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .im {
+    font-size: 2em;
+  }
+
+  .contact-page h1 {
+    writing-mode: horizontal-tb;
+  }
+}
+
+@media (max-width: 80em) {
+  h1 {
+    text-align: center;
+  }
+  .im-elle {
+    margin-top: 4em;
+  }
+  .line-three {
+    margin: auto;
+  }
+  .contact-page h1 {
+    writing-mode: horizontal-tb;
+  }
+}
+
+/* #img-of-me {
+  max-width: 18rem;
+  /* clip-path: circle(); */
+/* border-radius: 500px 500px 0px 0px;
+  position: relative;
+  bottom: 2.5em;
+  left: 5em;
+} */
+/* #email {
   font-family: var(--ff-primary);
   max-width: 30rem;
   margin: 30px;
@@ -223,4 +246,4 @@ a#email:hover {
   background-color: var(--clr-primary-300);
   color: white;
   transition: ease-in-out 150ms;
-}
+} */
