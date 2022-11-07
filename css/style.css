@@ -12,7 +12,9 @@
 
   --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -29,6 +31,9 @@ body {
 }
 .hero {
   background-color: var(--clr-neutral-100);
+  height: 75vh;
+}
+.about {
   max-width: 100vw;
 }
 .project-page {
@@ -77,19 +82,19 @@ a.hello:hover {
   color: var(--clr-neutral-200);
   transition: ease-in-out 250ms;
 }
-
 h1 {
   font-family: var(--ff-serif);
-  font-size: clamp(3rem, 1rem + 10vw, 10rem);
 }
+
 .contact-page h1 {
-  font-size: clamp(6.25rem, 1rem + 10vw, 15rem);
+  font-size: clamp(6.25rem, 1rem + 12vw, 15rem);
   writing-mode: vertical-rl;
   margin-block-end: 0;
   text-align: center;
 }
 .hey-hi-hello h1 {
   margin-top: 1.25em;
+  font-size: clamp(3rem, 1rem + 12vw, 10rem);
 }
 
 .home-text {
@@ -98,6 +103,7 @@ h1 {
 .line-three {
   max-width: 90%;
   margin: auto;
+  padding-bottom: 2em;
   display: flex;
   gap: 2em;
 }
@@ -125,13 +131,36 @@ h1 {
   font-family: var(--ff-bold-primary);
   text-transform: uppercase;
 }
+
+.portfolio {
+  display: flex;
+  background-color: black;
+  max-height: 5vh;
+  text-transform: uppercase;
+  word-spacing: 0em;
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--clr-neutral-100);
+}
+.portfolio p {
+  margin: auto;
+  margin-right: 0.5em;
+  position: relative;
+  right: 0.2em;
+  font-size: 5rem;
+}
 h2 {
-  margin-top: 0.5em;
+  /* margin-top: 0.5em; */
   font-family: var(--ff-bold-primary);
   font-size: clamp(2rem, 1rem + 10vw, 12rem);
 }
 .nice-to-meet-you {
   text-align: center;
+  text-transform: uppercase;
+}
+
+.about h2 {
+  padding: 1em;
   text-transform: uppercase;
 }
 
@@ -162,6 +191,9 @@ h5 {
 }
 
 @media (min-width: 60em) {
+  h1 {
+    margin-top: 0;
+  }
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -187,26 +219,10 @@ h5 {
   border: 6px #676a14 solid;
 }
 
-@media (max-width: 30em) {
-  h1 {
-    text-align: center;
-  }
-  .im-elle {
-    margin-top: 2em;
-  }
-  p {
-    font-size: 1.5rem;
-  }
-  .im {
-    font-size: 2em;
-  }
-
-  .contact-page h1 {
-    writing-mode: horizontal-tb;
-  }
+.contact-page h1 {
+  font-size: clamp(6rem, 1rem + 10vw, 16em);
 }
-
-@media (max-width: 80em) {
+@media (max-width: 60em) {
   h1 {
     text-align: center;
   }
@@ -219,16 +235,43 @@ h5 {
   .contact-page h1 {
     writing-mode: horizontal-tb;
   }
+  .hey-hi-hello h1 {
+    margin-top: 0.25;
+  }
 }
-
-/* #img-of-me {
-  max-width: 18rem;
-  /* clip-path: circle(); */
-/* border-radius: 500px 500px 0px 0px;
+@media (max-width: 35em) {
+  h1 {
+    text-align: center;
+  }
+  .im-elle {
+    margin-top: 2em;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .im {
+    font-size: 2em;
+  }
+  .contact-page h1 {
+    writing-mode: horizontal-tb;
+  }
+  .hero {
+    height: 60vh;
+  }
+  .portfiolio p {
+    font-size: 0.25rem;
+  }
+}
+#img-of-me {
+  max-width: 26rem;
+  border-radius: 500px 500px 0px 0px;
   position: relative;
   bottom: 2.5em;
   left: 5em;
-} */
+  padding: 0.5em;
+  border: 4px #676a14 solid;
+}
+
 /* #email {
   font-family: var(--ff-primary);
   max-width: 30rem;
