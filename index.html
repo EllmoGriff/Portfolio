@@ -41,7 +41,9 @@
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand text-white p-2 brand" href="index.html">She</a>
+        <div class="navbar-brand">
+          <a class="text-white p-2 brand" href="index.html">She</a>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -78,44 +80,80 @@
           <h2>Nice to meet you</h2>
         </div>
 
-        <div class="line-three">
-          <p class="home-text">
-            Training Front-end Developer based in England, Derby. Learning HTML,
-            CSS and JavaScript. Originally a Freelance Artist creating
-            chalkboard art, Logo's and Digital Art, I then stumbled across the
-            beauty of being a front-end developer. Here I am now.
-          </p>
-          <div class="im-elle">
-            <span class="im">I'm</span><br /><span class="elle">Elle</span
-            ><span class="dot">.</span>
+        <div class="row hero-three-grid">
+          <div class="col home-text">
+            <p>
+              Training Front-end Developer based in England, Derby. Learning
+              HTML, CSS and JavaScript. Originally a Freelance Artist creating
+              chalkboard art, Logo's and Digital Art, I then stumbled across the
+              beauty of being a front-end developer. Here I am now.
+            </p>
+          </div>
+          <div class="col">
+            <div class="im-elle">
+              <span class="im">I'm</span>
+              <div>
+                <span class="elle">Elle</span>
+                <span class="dot">.</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="banner">
-        <div class="portfolio">
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
-          <p>portfolio</p>
+      <div class="portfolio">
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+        <p>portfolio</p>
+      </div>
+    </div>
+
+    <div class="about-header">
+      <h2>A Little about Me</h2>
+    </div>
+
+    <div class="container about">
+      <div class="row about-grid">
+        <div class="col">
+          <img
+            src="images/me.png"
+            alt="Picture of smiling, curly haired me"
+            class="img-fluid"
+            id="img-of-me"
+          />
+          <div class="deets">
+            <p>Name: Elle Griffiths</p>
+            <p>Age: 26</p>
+            <p>Location: England</p>
+          </div>
+        </div>
+        <div class="col about-col-span-2">
+          <h4>“I'm trying to figure out if I love art enough to be poor.”</h4>
+          <span class="about-text">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              euismod diam sed augue gravida maximus quis vitae nibh. Aenean
+              ornare eu tellus at facilisis. Mauris posuere consequat molestie.
+              Donec varius tincidunt lectus vitae feugiat. Ut arcu ligula,
+              porttitor a facilisis at, pretium in mauris. Sed eu egestas
+              sapien. Nam ac lectus nisi. Donec aliquam mi vel justo sodales
+              aliquam. Nulla vel lectus accumsan, efficitur risus et, ornare
+              dui. Vestibulum mollis tempus sapien sed mattis. Interdum et
+              malesuada fames ac ante ipsum primis in faucibus. In est mauris,
+              rutrum sed semper rhoncus, tempus sit amet lectus. In interdum,
+              ipsum nec efficitur tincidunt, enim ante tempor leo, in pretium
+              erat ligula vel mi.
+            </p>
+          </span>
         </div>
       </div>
     </div>
-    <!-- <div class="container about">
-      <div>
-        <h2>A Little about Me</h2>
-        <img
-          src="images/me.png"
-          alt="Picture of smiling, curly haired me"
-          class="img-fluid"
-          id="img-of-me"
-        />
-      </div>
-    </div> -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
       integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"

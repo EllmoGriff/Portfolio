@@ -26,19 +26,43 @@ html {
 body {
   background-color: var(--clr-neutral-100);
   margin: auto;
+  max-width: 100%;
   font-family: var(--ff-primary);
   color: black;
 }
+.navbar-brand {
+  padding: 1rem;
+}
+.navbar-brand a {
+  display: block;
+  background-color: var(--clr-neutral-900);
+  font-size: clamp(2rem, 1rem + 6vw, 3rem);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar-brand a:hover {
+  background-color: var(--clr-primary-400);
+  transition: ease-in-out 150ms;
+}
+.navbar-nav a {
+  font-size: 2.5rem;
+  margin-right: 1em;
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-serif);
+}
+.navbar a:hover {
+  color: var(--clr-neutral-200);
+}
 .hero {
-  background-color: var(--clr-neutral-100);
-  height: 75vh;
+  margin-top: 14em;
 }
 .about {
-  max-width: 100vw;
+  max-width: 80%;
 }
 .project-page {
   background-color: var(--clr-neutral-100);
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -47,34 +71,12 @@ body {
   justify-content: end;
   margin-right: 5%;
 }
-.navbar-brand {
-  background-color: var(--clr-neutral-900);
-}
-.navbar-brand:hover {
-  background-color: var(--clr-primary-400);
-  transition: ease-in-out 150ms;
-}
-.navbar a {
-  font-size: 2rem;
-  margin-right: 1em;
-  color: var(--clr-neutral-900);
-}
-.navbar a:hover {
-  color: var(--clr-neutral-200);
-}
-a.brand {
-  font-family: var(--ff-bold-primary);
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 3rem;
-  background-color: var(--clr-neutral-900);
-}
 
 a.hey,
 a.hello,
 a.hi {
   text-decoration: none;
-  color: black;
+  color: var(--clr-neutral-900);
 }
 a.hey:hover,
 a.hi:hover,
@@ -85,83 +87,18 @@ a.hello:hover {
 h1 {
   font-family: var(--ff-serif);
 }
-
-.contact-page h1 {
-  font-size: clamp(6.25rem, 1rem + 12vw, 15rem);
-  writing-mode: vertical-rl;
-  margin-block-end: 0;
-  text-align: center;
-}
-.hey-hi-hello h1 {
-  margin-top: 1.25em;
-  font-size: clamp(3rem, 1rem + 12vw, 10rem);
-}
-
-.home-text {
-  margin-top: 2em;
-}
-.line-three {
-  max-width: 90%;
-  margin: auto;
-  padding-bottom: 2em;
-  display: flex;
-  gap: 2em;
-}
-.im {
-  font-size: clamp(0.2rem, 1rem + 10vw, 4rem);
-  font-family: var(--ff-bold-primary);
-}
-.elle {
-  font-size: clamp(6rem, 1rem + 10vw, 25rem);
-  font-family: var(--ff-serif);
-  text-decoration: underline;
-  text-decoration-color: var(--clr-primary-400);
-  position: relative;
-}
-.dot {
-  font-size: clamp(3rem, 1rem + 10vw, 25rem);
-  font-family: var(--ff-serif);
-}
-.elle,
-.dot {
-  position: relative;
-  bottom: 0.4em;
-}
-.projects {
-  font-family: var(--ff-bold-primary);
-  text-transform: uppercase;
-}
-
-.portfolio {
-  display: flex;
-  background-color: black;
-  max-height: 5vh;
-  text-transform: uppercase;
-  word-spacing: 0em;
-  max-width: 100%;
-  overflow: hidden;
-  color: var(--clr-neutral-100);
-}
-.portfolio p {
-  margin: auto;
-  margin-right: 0.5em;
-  position: relative;
-  right: 0.2em;
-  font-size: 5rem;
-}
 h2 {
-  /* margin-top: 0.5em; */
   font-family: var(--ff-bold-primary);
-  font-size: clamp(2rem, 1rem + 10vw, 12rem);
 }
-.nice-to-meet-you {
+.nice-to-meet-you h2,
+.about-header h2 {
+  font-size: clamp(2rem, 1rem + 6vw, 12rem);
   text-align: center;
   text-transform: uppercase;
 }
 
-.about h2 {
-  padding: 1em;
-  text-transform: uppercase;
+.hey-hi-hello h1 {
+  font-size: clamp(3rem, 1rem + 6vw, 10rem);
 }
 
 p {
@@ -177,6 +114,91 @@ h5 {
   text-align: start;
 }
 
+.hero-three-grid {
+  max-width: 90%;
+  margin: auto;
+  padding-bottom: 2em;
+  display: grid;
+}
+.hero-three-grid p {
+  margin-top: 1em;
+  letter-spacing: 1.5px;
+}
+
+.im {
+  font-size: clamp(0.2rem, 1rem + 10vw, 4rem);
+  font-family: var(--ff-bold-primary);
+}
+.elle {
+  font-size: clamp(6rem, 1rem + 10vw, 25rem);
+  font-family: var(--ff-serif);
+  text-decoration: underline;
+  text-decoration-color: var(--clr-primary-400);
+  position: relative;
+  bottom: 0.4em;
+}
+.dot {
+  font-size: clamp(3rem, 1rem + 10vw, 25rem);
+  font-family: var(--ff-serif);
+  position: relative;
+  bottom: 0.4em;
+}
+
+.about-header {
+  padding-top: 10em;
+}
+#img-of-me {
+  max-width: clamp(19rem, 1rem + 14vw, 30rem);
+  border-radius: 500px 500px 0px 0px;
+  display: block;
+  margin: 2em auto;
+  box-shadow: 10px 7px var(--clr-primary-400);
+  margin-bottom: 4em;
+}
+.about-grid {
+  max-width: 90%;
+  display: grid;
+  margin: auto;
+}
+.about-text p {
+  margin-top: 4em;
+  position: relative;
+  right: 5em;
+  border: var(--clr-primary-400) solid 6px;
+  padding: 2em;
+  letter-spacing: 1.5px;
+}
+h4 {
+  padding-top: 1em;
+  font-size: 4rem;
+  font-family: var(--ff-serif);
+}
+.project-header h1 {
+  font-family: var(--ff-bold-primary);
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1rem + 6vw, 10rem);
+}
+
+.portfolio {
+  display: flex;
+  gap: 0.5em;
+  background-color: black;
+  max-height: 5vh;
+  text-transform: uppercase;
+  max-width: 100%;
+  color: var(--clr-neutral-100);
+  overflow: hidden;
+}
+.portfolio p {
+  margin: auto;
+  margin-right: 0.5em;
+  position: relative;
+  right: 1em;
+  font-size: 5rem;
+  overflow: visible;
+  letter-spacing: 2px;
+}
+
 .project-grid {
   max-width: 80%;
   margin: auto;
@@ -189,15 +211,48 @@ h5 {
   grid-column: span 2;
   margin: auto;
 }
+.deets {
+  font: 2rem;
+  margin: auto;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
 
-@media (min-width: 60em) {
-  h1 {
-    margin-top: 0;
-  }
+.deets p {
+  text-transform: uppercase;
+  max-width: 30rem;
+  padding: 10px;
+  background-color: var(--clr-neutral-900);
+  font-size: 20px;
+  color: var(--clr-neutral-100);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+@media (min-width: 70em) {
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .about-grid,
+  .hero-three-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+@media (max-width: 90em) {
+  .about {
+    max-width: 100%;
+  }
+  .about-text p {
+    margin: auto;
+    position: relative;
+    left: 0em;
+    padding: 0.5em;
+  }
+}
+
 .project-num,
 .project-num-2 {
   text-align: center;
@@ -206,40 +261,67 @@ h5 {
   margin: auto;
 }
 
-.p-one-img {
-  max-width: 25rem;
-  margin: auto;
-}
-
 .contact-page {
   margin-top: 1em;
-  max-width: 90vw;
-  height: 89vh;
+  max-width: 90%;
+  max-height: 100vh;
   display: flex;
   border: 6px #676a14 solid;
 }
-
 .contact-page h1 {
-  font-size: clamp(6rem, 1rem + 10vw, 16em);
+  font-size: clamp(6.25rem, 1rem + 12vw, 15rem);
+  writing-mode: vertical-rl;
+  margin-block-end: 0;
+  text-align: center;
 }
-@media (max-width: 60em) {
+
+@media (max-width: 70em) {
   h1 {
     text-align: center;
   }
   .im-elle {
     margin-top: 4em;
+    display: flex;
+    justify-content: center;
   }
-  .line-three {
-    margin: auto;
+  p {
+    font-size: 1.6rem;
+  }
+  h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .home-text p {
+    text-align: center;
+  }
+  .elle {
+    margin-left: 0.2em;
+  }
+  .hero {
+    margin-top: 3em;
   }
   .contact-page h1 {
     writing-mode: horizontal-tb;
   }
-  .hey-hi-hello h1 {
-    margin-top: 0.25;
+  .deets {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .deets p {
+    font-size: 1.5rem;
+  }
+  .about-header {
+    padding-top: 6em;
   }
 }
+
 @media (max-width: 35em) {
+  .navbar-nav a {
+    font-size: 1.5rem;
+  }
+  .navbar-brand a {
+    font-size: 2rem;
+  }
   h1 {
     text-align: center;
   }
@@ -249,27 +331,39 @@ h5 {
   p {
     font-size: 1.5rem;
   }
+  h4 {
+    font-size: 2.5rem;
+  }
   .im {
     font-size: 2em;
   }
   .contact-page h1 {
     writing-mode: horizontal-tb;
   }
-  .hero {
-    height: 60vh;
+  .about-header {
+    padding-top: 5em;
   }
-  .portfiolio p {
-    font-size: 0.25rem;
+  .hero {
+    margin-top: 1.25em;
+    height: 50vh;
+  }
+  .portfolio p {
+    font-size: 2rem;
+    max-height: 3vh;
+  }
+  .im-elle {
+    margin-top: 4em;
+    display: flex;
+  }
+  .deets p {
+    font-size: 1.5rem;
   }
 }
-#img-of-me {
-  max-width: 26rem;
-  border-radius: 500px 500px 0px 0px;
-  position: relative;
-  bottom: 2.5em;
-  left: 5em;
-  padding: 0.5em;
-  border: 4px #676a14 solid;
+
+@media (max-width: 20em) {
+  .about-header {
+    padding-top: 14em;
+  }
 }
 
 /* #email {
