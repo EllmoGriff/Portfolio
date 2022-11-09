@@ -3,7 +3,6 @@
   --ff-bold-primary: "Josefin Sans", sans-serif;
 
   --ff-serif: "BIZ UDMincho", serif;
-  --ff-bold-serif: "DM Serif Display'", serif;
 
   --clr-neutral-100: #f8f4f0;
   --clr-neutral-200: #d9cab6;
@@ -51,15 +50,18 @@ body {
   color: var(--clr-neutral-900);
   font-family: var(--ff-serif);
 }
+
 .navbar a:hover {
   color: var(--clr-neutral-200);
 }
 .hero {
-  margin-top: 14em;
+  margin-top: 12em;
 }
 .about {
   max-width: 80%;
+  margin-bottom: 2em;
 }
+
 .project-page {
   background-color: var(--clr-neutral-100);
   height: 100%;
@@ -99,6 +101,7 @@ h2 {
 
 .hey-hi-hello h1 {
   font-size: clamp(3rem, 1rem + 6vw, 10rem);
+  padding-bottom: 0.25em;
 }
 
 p {
@@ -116,7 +119,7 @@ h5 {
 
 .hero-three-grid {
   max-width: 90%;
-  margin: auto;
+  margin-left: 14em;
   padding-bottom: 2em;
   display: grid;
 }
@@ -143,7 +146,10 @@ h5 {
   position: relative;
   bottom: 0.4em;
 }
-
+#go-to-about {
+  padding: 3em;
+  border: 1px solid transparent;
+}
 .about-header {
   padding-top: 10em;
 }
@@ -163,14 +169,14 @@ h5 {
 .about-text p {
   margin-top: 4em;
   position: relative;
-  right: 5em;
+  right: 4em;
   border: var(--clr-primary-400) solid 6px;
   padding: 2em;
   letter-spacing: 1.5px;
 }
 h4 {
   padding-top: 1em;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: var(--ff-serif);
 }
 .project-header h1 {
@@ -207,6 +213,9 @@ h4 {
   color: #231f1c;
 }
 
+.about-grid {
+  margin-top: 2em;
+}
 .grid-col-span-2 {
   grid-column: span 2;
   margin: auto;
@@ -231,27 +240,6 @@ h4 {
   box-shadow: var(--shadow);
   text-align: center;
 }
-@media (min-width: 70em) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .about-grid,
-  .hero-three-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 90em) {
-  .about {
-    max-width: 100%;
-  }
-  .about-text p {
-    margin: auto;
-    position: relative;
-    left: 0em;
-    padding: 0.5em;
-  }
-}
 
 .project-num,
 .project-num-2 {
@@ -274,10 +262,88 @@ h4 {
   margin-block-end: 0;
   text-align: center;
 }
+footer {
+  margin-top: 10em;
+  background-color: var(--clr-neutral-200);
+}
+.base {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  max-width: 80%;
+}
+hr {
+  border-top: 2px solid var(--clr-neutral-900);
+  margin: auto;
+}
+.elle-footer {
+  font-size: clamp(3rem, 1rem + 6vw, 7rem);
+  font-family: var(--ff-serif);
+  text-decoration: underline;
+  text-decoration-color: var(--clr-primary-400);
+}
+.dot-footer {
+  font-size: clamp(3rem, 1rem + 6vw, 7rem);
+  font-family: var(--ff-serif);
+}
+
+.footer-lets-talk {
+  font-family: var(--ff-bold-primary);
+  text-transform: uppercase;
+  margin-top: auto;
+  margin-left: auto;
+  font-size: 4rem;
+}
+.talk-footer a {
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+}
+.source-code {
+  display: flex;
+  justify-content: center;
+}
+.source-code p {
+  padding-top: 0.5em;
+  font-size: 1.5rem;
+}
+.git-link p {
+  margin: auto;
+  font-size: 1rem;
+}
+.git-link a {
+  color: var(--clr-neutral-900);
+  text-decoration: none;
+}
+@media (min-width: 70em) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-grid,
+  .hero-three-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 90em) {
+  .about {
+    max-width: 100%;
+  }
+  .hey-hi-hello {
+    padding-left: 5em;
+  }
+  .about-text p {
+    margin: 2em auto;
+    padding: 0.5em;
+    position: relative;
+    left: -4em;
+  }
+}
 
 @media (max-width: 70em) {
   h1 {
     text-align: center;
+  }
+  .footer-lets-talk {
+    font-size: 3rem;
   }
   .im-elle {
     margin-top: 4em;
@@ -285,11 +351,24 @@ h4 {
     justify-content: center;
   }
   p {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
   h4 {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  .hey-hi-hello {
+    padding-left: 0em;
+  }
+  .portfolio p {
+    font-size: 3rem;
+    max-height: 3.2vh;
+  }
+  .about-text p {
+    margin: auto;
+    padding: 0.5em;
+    position: relative;
+    left: 0em;
   }
   .home-text p {
     text-align: center;
@@ -311,7 +390,10 @@ h4 {
     font-size: 1.5rem;
   }
   .about-header {
-    padding-top: 6em;
+    padding-top: 3em;
+  }
+  .hero-three-grid {
+    margin: auto;
   }
 }
 
@@ -341,11 +423,11 @@ h4 {
     writing-mode: horizontal-tb;
   }
   .about-header {
-    padding-top: 5em;
+    padding-top: 8em;
   }
   .hero {
     margin-top: 1.25em;
-    height: 50vh;
+    height: 40vh;
   }
   .portfolio p {
     font-size: 2rem;
@@ -362,7 +444,10 @@ h4 {
 
 @media (max-width: 20em) {
   .about-header {
-    padding-top: 14em;
+    padding-top: 10em;
+  }
+  #go-to-about {
+    margin-bottom: 5em;
   }
 }
 
