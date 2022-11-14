@@ -7,7 +7,7 @@
   --clr-neutral-100: #f8f4f0;
   --clr-neutral-200: #d9cab6;
   --clr-primary-400: #676a14;
-  --clr-neutral-900: black;
+  --clr-neutral-900: #231f1c;
 
   --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
@@ -27,7 +27,7 @@ body {
   margin: auto;
   max-width: 100%;
   font-family: var(--ff-primary);
-  color: black;
+  color: var(--clr-neutral-900);
 }
 .navbar-brand {
   padding: 1rem;
@@ -70,15 +70,21 @@ body {
 }
 .project-header {
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  align-items: flex-end;
   margin-right: 5%;
+}
+.project-header p {
+  font-family: var(--ff-serif);
+  font-size: 2.5rem;
+  line-height: 1rem;
 }
 
 .project-img-grid {
   display: grid;
   max-width: 85%;
   margin: auto;
-  padding: 6em 0 12em 0;
+  padding: 6em 0 6em 0;
   gap: 2em;
 }
 .col {
@@ -87,12 +93,11 @@ body {
 #project-img {
   margin: auto;
   max-width: 42rem;
-  border: 5px solid var(--clr-primary-400);
-  padding: 1em;
-  border-radius: 5%;
+  border: 2px solid var(--clr-neutral-900);
+  padding: 0.5em;
 }
 
-.img-desc {
+/* .img-desc {
   background-color: var(--clr-neutral-200);
   box-shadow: var(--shadow);
   color: var(--clr-neutral-900);
@@ -101,7 +106,7 @@ body {
   position: relative;
   bottom: 3em;
   margin-left: 3em;
-}
+} */
 
 .img_title {
   font-family: var(--ff-bold-primary);
@@ -113,6 +118,9 @@ body {
   font-family: var(--ff-primary);
 }
 
+.project-desc-one {
+  margin-top: 20em;
+}
 .img-desc a,
 .project-desc a {
   text-decoration: none;
@@ -121,7 +129,9 @@ body {
 .img-desc a {
   color: var(--clr-neutral-900);
 }
-
+.margin {
+  margin: 6em 0 15em 0;
+}
 a.hey,
 a.hello,
 a.hi {
@@ -238,7 +248,7 @@ h4 {
 .portfolio {
   display: flex;
   gap: 0.5em;
-  background-color: black;
+  background-color: var(--clr-neutral-900);
   max-height: 5vh;
   text-transform: uppercase;
   max-width: 100%;
@@ -299,43 +309,71 @@ h4 {
   margin: auto;
 }
 
+.background .container {
+  background: linear-gradient(
+    to right,
+    #231f1c 0%,
+    #231f1c 50%,
+    #f8f4f0 50%,
+    #f8f4f0 100%
+  );
+}
+
 .contact-page {
   margin-top: 1em;
   max-width: 80%;
   max-height: 100vh;
-  display: flex;
-  border: 6px #676a14 solid;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  border: 6px var(--clr-neutral-900) solid;
 }
-.contact-page section {
-  margin-block-end: auto;
+.lets-talk {
+  padding: 2em;
+  margin: 3em 0 2em 6em;
 }
 .lets-talk h1 {
-  font-size: clamp(6.25rem, 1rem + 12vw, 15rem);
-  writing-mode: vertical-rl;
-  margin-block-end: 0;
-  text-align: center;
-  position: relative;
+  color: var(--clr-neutral-100);
+  font-size: clamp(6.25rem, 1rem + 10vw, 15rem);
 }
-.contact-text h2 {
+.line {
+  margin: 0 0.25em 0 0.25em;
+}
+.contact-text {
+  margin: 3em 1em 1em 1em;
+  color: var(--clr-neutral-100);
   font-family: var(--ff-primary);
   font-size: 4rem;
+  line-height: 1.5em;
 }
 .contact-text p {
-  font-family: var(--ff-serif);
-  font-size: 6rem;
+  font-size: 2rem;
+  text-align: end;
+  letter-spacing: 0.5rem;
 }
-.advise {
-  font-family: var(--ff-serif);
-  font-size: 7rem;
+.contact-details {
+  margin: auto;
+  padding-bottom: 2rem;
 }
-.work {
-  font-family: var(--ff-bold-primary);
-  font-size: 4rem;
-}
-.say-hello {
+.contact-head {
   font-family: var(--ff-bold-primary);
   text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: var(--clr-primary-400);
   font-size: 8rem;
+  margin-top: 6rem;
+}
+.contact {
+  font-size: 3rem;
+  margin-left: 0.2em;
+  letter-spacing: 0.5rem;
+}
+
+.say-hello {
+  font-family: var(--ff-bold-primary);
+  color: var(--clr-primary-400);
+  text-transform: uppercase;
+  font-size: 6rem;
 }
 footer {
   margin-top: 10em;
