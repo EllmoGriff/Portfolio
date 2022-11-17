@@ -92,7 +92,7 @@ body {
 .col-img {
   max-width: 50rem;
   margin: auto;
-  background-color: var(--clr-neutral-200);
+  background-color: var(--clr-neutral-900);
   max-height: 85%;
 }
 #project-img {
@@ -110,6 +110,7 @@ body {
 
 .img_title {
   font-family: var(--ff-bold-primary);
+  color: var(--clr-neutral-200);
   text-transform: uppercase;
   font-size: clamp(2rem, 1rem + 8vw, 2.5rem);
   position: relative;
@@ -122,6 +123,8 @@ body {
 }
 h2 a {
   font-size: 12rem;
+  color: var(--clr-neutral-200);
+  text-decoration: none;
 }
 .num-light {
   font-family: var(--ff-primary);
@@ -134,7 +137,7 @@ h2 a {
 .project-desc-one {
   margin-top: 20em;
 }
-.img-desc a,
+
 .project-desc a {
   text-decoration: none;
   color: var(--clr-neutral-900);
@@ -334,24 +337,23 @@ h4 {
     #f8f4f0 50%,
     #f8f4f0 100%
   );
+  border: 6px var(--clr-neutral-900) solid;
 }
 
 .contact-page {
-  margin-top: 1em;
+  margin: 5em auto;
   max-width: 80%;
-  max-height: 100vh;
   display: grid;
-  justify-content: space-evenly;
-  grid-template-columns: 1fr 1fr;
-  border: 6px var(--clr-neutral-900) solid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, 1fr);
 }
 .lets-talk {
-  padding: 2em;
-  margin: 3em 0 2em 6em;
+  padding: 2rem;
 }
 .lets-talk h1 {
   color: var(--clr-neutral-100);
-  font-size: clamp(6.25rem, 1rem + 10vw, 15rem);
+  font-size: clamp(6rem, 1rem + 8vw, 15rem);
 }
 .line {
   margin: 0 0.25em 0 0.25em;
@@ -364,7 +366,6 @@ h4 {
   line-height: 1.5em;
 }
 .contact-text p {
-  font-size: 2rem;
   text-align: end;
   letter-spacing: 0.5rem;
 }
@@ -377,10 +378,15 @@ h4 {
   text-transform: uppercase;
   text-decoration: underline;
   text-decoration-color: var(--clr-primary-400);
-  font-size: 8rem;
+  font-size: clamp(5rem, 1rem + 10vw, 9rem);
+}
+.email {
   margin-top: 6rem;
 }
-.contact {
+.phone {
+  margin-top: 6rem;
+}
+.contact p {
   font-size: 3rem;
   margin-left: 0.2em;
   letter-spacing: 0.5rem;
@@ -448,6 +454,11 @@ hr {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  @media (min-width: 70em) {
+    .contact-page {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+  }
   .about-grid,
   .hero-three-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -458,8 +469,32 @@ hr {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 90em) {
+  .background .container {
+    background: linear-gradient(
+      to bottom,
+      #231f1c 0%,
+      #231f1c 50%,
+      #f8f4f0 50%,
+      #f8f4f0 100%
+    );
+  }
+}
+@media (max-width: 90em) {
+  .say-hello {
+    font-size: 5rem;
+  }
+  .lets-talk h1 {
+    text-align: start;
+  }
+  .contact-page {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+  .contact-details {
+    margin: 0 auto;
+    text-align: center;
+  }
   .about {
     max-width: 100%;
   }
@@ -478,16 +513,19 @@ hr {
   .project-grid {
     padding: 0.5em;
   }
-  .img-desc {
-    position: relative;
-    bottom: 3.5rem;
-  }
+
   .project-num-2 {
     grid-row: 1;
     grid-column: 3;
     text-align: end;
   }
-
+  .contact-text {
+    margin: 3rem 1rem 2rem 1rem;
+  }
+  .contact p {
+    margin-left: 0;
+    text-align: center;
+  }
   h2 a {
     font-size: 8rem;
   }
@@ -553,9 +591,6 @@ hr {
   .hero {
     margin-top: 3em;
   }
-  .contact-page h1 {
-    writing-mode: horizontal-tb;
-  }
   .deets {
     flex-direction: row;
     justify-content: center;
@@ -569,13 +604,18 @@ hr {
   .hero-three-grid {
     margin: auto;
   }
+  .contact-text {
+    margin: 4rem 0 1rem 0;
+  }
 }
 
 @media (max-width: 35em) {
   #project-img {
     max-width: 30em;
   }
-
+  .say-hello {
+    font-size: 3.75rem;
+  }
   .navbar-nav a {
     font-size: 1.5rem;
   }
@@ -597,13 +637,9 @@ hr {
   .im {
     font-size: 2em;
   }
-  .contact-page h1 {
-    writing-mode: horizontal-tb;
-  }
   .about-header {
     padding-top: 8em;
   }
-
   .hero {
     margin-top: 1.25em;
     height: 40vh;
@@ -622,8 +658,16 @@ hr {
   .talk-footer a {
     font-size: 2rem;
   }
+  .contact p {
+    font-size: 1.75rem;
+  }
+  .lets-talk h1 {
+    font-size: 5rem;
+  }
+  .lets-talk {
+    padding: 0.5rem;
+  }
 }
-
 @media (max-width: 20em) {
   .about-header {
     padding-top: 10em;
@@ -631,23 +675,10 @@ hr {
   #go-to-about {
     margin-bottom: 5em;
   }
+  .contact-text .hear-from {
+    padding-bottom: 10rem;
+  }
+  .email {
+    margin-top: 0;
+  }
 }
-
-/* #email {
-  font-family: var(--ff-primary);
-  max-width: 30rem;
-  margin: 30px;
-  padding: 10px;
-  background-color: white;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-  border-radius: 50px;
-  box-shadow: var(--shadow);
-}
-
-a#email:hover {
-  background-color: var(--clr-primary-300);
-  color: white;
-  transition: ease-in-out 150ms;
-} */
