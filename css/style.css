@@ -7,7 +7,7 @@
   --clr-neutral-100: #f8f4f0;
   --clr-neutral-200: #d9cab6;
   --clr-primary-400: #676a14;
-  --clr-neutral-900: #231f1c;
+  --clr-neutral-900: #352e2a;
 
   --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
@@ -79,61 +79,64 @@ body {
   font-size: 2.5rem;
   position: relative;
   bottom: 1.5rem;
-  /* line-height: 1rem; */
 }
 
 .project-img-grid {
   display: grid;
-  max-width: 85%;
+  max-width: 80%;
   margin: auto;
-  padding: 2em 0 6em 0;
   gap: 2em;
+  border-top: 6px solid var(--clr-primary-400);
 }
 .col-img {
-  max-width: 50rem;
-  margin: auto;
-  background-color: var(--clr-neutral-900);
-  max-height: 85%;
+  max-width: 38rem;
+  margin: 3rem auto;
+  z-index: 10;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: var(--shadow);
 }
+
 #project-img {
   margin: auto;
-  max-width: 42rem;
+  max-width: 36rem;
   padding: 0.5em;
 }
 
-.img-desc {
-  max-width: fit-content;
-  padding: 0.5rem 2rem 0 2rem;
-  position: relative;
-  bottom: 5em;
-}
-
-.img_title {
-  font-family: var(--ff-bold-primary);
-  color: var(--clr-neutral-200);
-  text-transform: uppercase;
-  font-size: clamp(2rem, 1rem + 8vw, 2.5rem);
-  position: relative;
-  bottom: 2rem;
-  right: 1rem;
-}
-.project-num-small {
+.img-desc h2 {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 4px solid var(--clr-primary-400);
   font-size: clamp(2rem, 1rem + 8vw, 6rem);
   font-family: var(--ff-primary);
+  border-bottom: 4px solid var(--clr-primary-400);
 }
+.img_title {
+  font-family: var(--ff-bold-primary);
+  color: var(--clr-primary-400);
+  text-transform: uppercase;
+  padding-left: 0.6rem;
+  font-size: clamp(2rem, 1rem + 8vw, 2.5rem);
+}
+.project-date {
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  letter-spacing: 0.75rem;
+}
+
 h2 a {
   font-size: 12rem;
-  color: var(--clr-neutral-200);
+  color: var(--clr-neutral-900);
   text-decoration: none;
 }
-.num-light {
-  font-family: var(--ff-primary);
-
-  position: absolute;
-  left: 2.5rem;
-  font-size: 12rem;
-  display: inline-block;
+h2 a:hover {
+  color: var(--clr-neutral-200);
 }
+
 .project-desc-one {
   margin-top: 20em;
 }
@@ -186,8 +189,10 @@ p {
 h5 {
   font-size: 4rem;
   font-family: var(--ff-bold-primary);
+  outline: 2px solid var(--clr-primary-400);
   text-transform: uppercase;
-  text-align: start;
+
+  padding: 0.5rem 0 0 0;
 }
 
 .hero-three-grid {
@@ -260,6 +265,8 @@ h4 {
   font-size: clamp(5.5rem, 1rem + 10vw, 11rem);
 }
 
+.project-quote {
+}
 .portfolio {
   display: flex;
   gap: 0.5em;
@@ -301,7 +308,6 @@ h4 {
   margin: auto;
 }
 .deets {
-  font: 2rem;
   margin: auto;
   align-items: center;
   flex-direction: column;
@@ -332,8 +338,8 @@ h4 {
 .background .container {
   background: linear-gradient(
     to right,
-    #231f1c 0%,
-    #231f1c 50%,
+    #352e2a 0%,
+    #352e2a 50%,
     #f8f4f0 50%,
     #f8f4f0 100%
   );
@@ -464,17 +470,18 @@ hr {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 60em) {
+@media (min-width: 56em) {
   .project-img-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 90em) {
   .background .container {
     background: linear-gradient(
       to bottom,
-      #231f1c 0%,
-      #231f1c 50%,
+      #352e2a 0%,
+      #352e2a 50%,
       #f8f4f0 50%,
       #f8f4f0 100%
     );
@@ -508,12 +515,25 @@ hr {
     left: -5em;
   }
   #project-img {
-    max-width: 29rem;
+    max-width: 30rem;
+  }
+  .project-date {
+    font-size: 1.5rem;
   }
   .project-grid {
-    padding: 0.5em;
+    padding: 1em;
   }
-
+  .margin {
+    margin: 0;
+  }
+  .project-date {
+    font-size: 2rem;
+  }
+  .project-img-grid {
+    padding: 2rem 0 2rem 0;
+    gap: 1rem;
+    max-width: 90%;
+  }
   .project-num-2 {
     grid-row: 1;
     grid-column: 3;
@@ -527,7 +547,7 @@ hr {
     text-align: center;
   }
   h2 a {
-    font-size: 8rem;
+    font-size: 10rem;
   }
   .project-header p {
     text-align: center;
@@ -542,10 +562,7 @@ hr {
   h1 {
     text-align: center;
   }
-  .project-img-grid {
-    padding: 2rem 0 2rem 0;
-    gap: 0.5rem;
-  }
+
   .footer-lets-talk {
     font-size: 3rem;
   }
@@ -553,6 +570,22 @@ hr {
     margin-top: 4em;
     display: flex;
     justify-content: center;
+  }
+  #project-img {
+    max-width: 26em;
+  }
+  .project-img-grid {
+    max-width: 95%;
+  }
+  .img-desc h2 {
+    padding: 0.5rem;
+  }
+  .col-img {
+    max-width: 28rem;
+  }
+  .project-date {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
   .project-num-2 {
     grid-row: 1;
@@ -610,9 +643,6 @@ hr {
 }
 
 @media (max-width: 35em) {
-  #project-img {
-    max-width: 30em;
-  }
   .say-hello {
     font-size: 3.75rem;
   }
