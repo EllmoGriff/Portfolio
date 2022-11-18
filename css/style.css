@@ -58,7 +58,7 @@ body {
   margin-top: 12em;
 }
 .about {
-  max-width: 80%;
+  max-width: 90%;
   margin-bottom: 2em;
 }
 
@@ -201,9 +201,10 @@ h5 {
   padding-bottom: 2em;
   display: grid;
 }
-.hero-three-grid p {
+.home-text p {
   letter-spacing: 1.5px;
-  margin-bottom: 6em;
+  margin-bottom: 4em;
+  padding-top: 2rem;
 }
 
 .im {
@@ -242,18 +243,20 @@ h5 {
 .about-grid {
   max-width: 90%;
   display: grid;
-  margin: auto;
+  margin: 2em auto;
 }
+
 .about-text p {
-  margin-top: 4em;
   position: relative;
-  right: 4em;
+  right: 6em;
   border: var(--clr-primary-400) solid 6px;
-  padding: 2em;
+  padding: 1em;
+
   letter-spacing: 1.5px;
 }
 h4 {
-  padding-top: 1em;
+  padding: 3rem 0 3rem 0;
+  margin: auto;
   font-size: 3.5rem;
   font-family: var(--ff-serif);
   position: relative;
@@ -265,8 +268,6 @@ h4 {
   font-size: clamp(5.5rem, 1rem + 10vw, 11rem);
 }
 
-.project-quote {
-}
 .portfolio {
   display: flex;
   gap: 0.5em;
@@ -297,15 +298,15 @@ h4 {
   display: grid;
   border-bottom: solid #676a14 6px;
   color: #231f1c;
-  padding: 2em;
+  padding: 4em;
 }
 
-.about-grid {
-  margin-top: 2em;
-}
 .grid-col-span-2 {
   grid-column: span 2;
   margin: auto;
+}
+.grid-col-span-2 p {
+  padding-top: 1rem;
 }
 .deets {
   margin: auto;
@@ -386,6 +387,10 @@ h4 {
   text-decoration-color: var(--clr-primary-400);
   font-size: clamp(5rem, 1rem + 10vw, 9rem);
 }
+.contact a {
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+}
 .email {
   margin-top: 6rem;
 }
@@ -459,13 +464,16 @@ hr {
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-
+  @media (min-width: 90em) {
+    .about-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   @media (min-width: 70em) {
     .contact-page {
       grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
     }
   }
-  .about-grid,
   .hero-three-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -491,6 +499,26 @@ hr {
   .say-hello {
     font-size: 5rem;
   }
+  .about-text p {
+    margin: auto;
+    padding: 0.5em;
+    position: relative;
+    left: 0em;
+  }
+  .deets {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .deets p {
+    font-size: 1.5rem;
+  }
+  h4 {
+    text-align: center;
+    position: relative;
+    left: 0;
+
+    font-size: 3rem;
+  }
   .lets-talk h1 {
     text-align: start;
   }
@@ -502,18 +530,11 @@ hr {
     margin: 0 auto;
     text-align: center;
   }
-  .about {
-    max-width: 100%;
-  }
+
   .hey-hi-hello {
     padding-left: 5em;
   }
-  .about-text p {
-    margin: 2em auto;
-    padding: 0.5em;
-    position: relative;
-    left: -5em;
-  }
+
   #project-img {
     max-width: 30rem;
   }
@@ -595,12 +616,7 @@ hr {
   p {
     font-size: 1.9rem;
   }
-  h4 {
-    text-align: center;
-    position: relative;
-    left: 0;
-    margin-bottom: 2rem;
-  }
+
   .hey-hi-hello {
     padding-left: 0em;
   }
@@ -608,13 +624,9 @@ hr {
     font-size: 3rem;
     max-height: 3.2vh;
   }
-  .about-text p {
-    margin: auto;
-    padding: 0.5em;
-    position: relative;
-    left: 0em;
-  }
+
   .home-text p {
+    padding: 0;
     text-align: center;
     margin: 0;
   }
@@ -624,13 +636,7 @@ hr {
   .hero {
     margin-top: 3em;
   }
-  .deets {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .deets p {
-    font-size: 1.5rem;
-  }
+
   .about-header {
     padding-top: 3em;
   }
