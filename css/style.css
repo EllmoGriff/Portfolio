@@ -11,6 +11,7 @@
 
   --shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
+
 *,
 ::before,
 ::after {
@@ -29,9 +30,11 @@ body {
   font-family: var(--ff-primary);
   color: var(--clr-neutral-900);
 }
+
 .navbar-brand {
   padding: 1rem;
 }
+
 .navbar-brand a {
   display: block;
   background-color: var(--clr-neutral-900);
@@ -40,10 +43,12 @@ body {
   text-transform: uppercase;
   font-weight: 700;
 }
+
 .navbar-brand a:hover {
   background-color: var(--clr-primary-400);
   transition: ease-in-out 150ms;
 }
+
 .navbar-nav a {
   font-size: 2.5rem;
   margin-right: 1em;
@@ -54,30 +59,37 @@ body {
 .navbar a:hover {
   color: var(--clr-neutral-200);
 }
+
 .hero {
   margin-top: 12em;
 }
+
 .about {
   max-width: 90%;
   margin-bottom: 2em;
 }
+
 .project-page {
   background-color: var(--clr-neutral-100);
   height: 100%;
   margin: 0 auto;
   padding: 0;
 }
+
 p {
   font-size: 2rem;
   text-align: start;
   line-height: 1.5;
 }
+
 h1 {
   font-family: var(--ff-serif);
 }
+
 h2 {
   font-family: var(--ff-bold-primary);
 }
+
 h3 {
   padding: 3rem 0 3rem 0;
   margin: auto;
@@ -86,12 +98,14 @@ h3 {
   position: relative;
   right: 2em;
 }
+
 h4 {
   text-align: center;
   font-size: clamp(8rem, 1rem + 10vw, 20rem);
   font-family: var(--ff-primary);
   margin: auto;
 }
+
 h5 {
   font-size: 4rem;
   font-family: var(--ff-bold-primary);
@@ -99,6 +113,7 @@ h5 {
   text-transform: uppercase;
   padding: 0.5rem 0 0 0;
 }
+
 /* Home page */
 
 .hero-three-grid {
@@ -107,37 +122,44 @@ h5 {
   padding-bottom: 2em;
   display: grid;
 }
+
 a.hey,
 a.hello,
 a.hi {
   text-decoration: none;
   color: var(--clr-neutral-900);
 }
+
 a.hey:hover,
 a.hi:hover,
 a.hello:hover {
   color: var(--clr-neutral-200);
   transition: ease-in-out 250ms;
 }
+
 .hey-hi-hello h1 {
   font-size: clamp(3rem, 1rem + 6vw, 10rem);
   padding-bottom: 0.25em;
 }
+
 .nice-to-meet-you h2,
 .about-header h2 {
   font-size: clamp(2rem, 1rem + 6vw, 12rem);
   text-align: center;
   text-transform: uppercase;
 }
+
 .home-text p {
   letter-spacing: 1.5px;
   margin-bottom: 4em;
   padding-top: 2rem;
 }
+
 .im {
   font-size: clamp(0.2rem, 1rem + 10vw, 4rem);
   font-family: var(--ff-bold-primary);
 }
+
 .elle {
   font-size: clamp(6rem, 1rem + 10vw, 25rem);
   font-family: var(--ff-serif);
@@ -146,12 +168,14 @@ a.hello:hover {
   position: relative;
   bottom: 0.4em;
 }
+
 .dot {
   font-size: clamp(3rem, 1rem + 10vw, 25rem);
   font-family: var(--ff-serif);
   position: relative;
   bottom: 0.4em;
 }
+
 .portfolio-banner {
   display: flex;
   gap: 0.5em;
@@ -162,6 +186,7 @@ a.hello:hover {
   color: var(--clr-neutral-100);
   overflow: hidden;
 }
+
 .portfolio-banner p {
   margin: auto;
   margin-right: 0.5em;
@@ -177,15 +202,18 @@ a.hello:hover {
 .about-header {
   padding-top: 10em;
 }
+
 #go-to-about {
   padding: 3em;
   border: 1px solid transparent;
 }
+
 .about-grid {
   max-width: 90%;
   display: grid;
   margin: 2em auto;
 }
+
 #img-of-me {
   max-width: clamp(19rem, 1rem + 14vw, 30rem);
   border-radius: 500px 500px 0px 0px;
@@ -194,6 +222,7 @@ a.hello:hover {
   box-shadow: 10px 7px var(--clr-primary-400);
   margin-bottom: 4em;
 }
+
 .about-text p {
   position: relative;
   right: 6em;
@@ -201,10 +230,12 @@ a.hello:hover {
   padding: 1em;
   letter-spacing: 1.5px;
 }
+
 .elle-underline {
   text-decoration: underline;
   text-decoration-color: var(--clr-primary-400);
 }
+
 .deets {
   margin: auto;
   align-items: center;
@@ -233,17 +264,20 @@ a.hello:hover {
   align-items: flex-end;
   margin-right: 5%;
 }
+
 .project-header p {
   font-family: var(--ff-serif);
   font-size: 2.5rem;
   position: relative;
   bottom: 1.5rem;
 }
+
 .project-header h1 {
   font-family: var(--ff-bold-primary);
   text-transform: uppercase;
   font-size: clamp(5.5rem, 1rem + 10vw, 11rem);
 }
+
 .project-img-grid {
   display: grid;
   max-width: 80%;
@@ -251,19 +285,26 @@ a.hello:hover {
   gap: 2em;
   border-top: 6px solid var(--clr-primary-400);
 }
+
 .col-img {
-  max-width: 38rem;
+  width: 36rem;
   margin: 3rem auto;
   z-index: 10;
   padding: 1rem;
   background-color: white;
   box-shadow: var(--shadow);
 }
+
 #project-img {
   margin: auto;
-  max-width: 36rem;
-  padding: 0.5em;
+  display: block;
+  width: 300px;
+  max-height: 350px;
+  object-fit: cover;
+  padding: 2em 1em 1em 1em;
 }
+
+
 .img-desc h2 {
   display: flex;
   align-items: center;
@@ -273,6 +314,7 @@ a.hello:hover {
   font-family: var(--ff-primary);
   border-bottom: 4px solid var(--clr-primary-400);
 }
+
 .img_title {
   font-family: var(--ff-bold-primary);
   color: var(--clr-primary-400);
@@ -280,6 +322,7 @@ a.hello:hover {
   padding-left: 0.6rem;
   font-size: clamp(2rem, 1rem + 8vw, 2.5rem);
 }
+
 .project-date {
   color: var(--clr-neutral-900);
   font-family: var(--ff-serif);
@@ -294,6 +337,7 @@ h2 a {
   color: var(--clr-neutral-900);
   text-decoration: none;
 }
+
 h2 a:hover {
   color: var(--clr-neutral-200);
 }
@@ -308,20 +352,25 @@ h2 a:hover {
   color: #231f1c;
   padding: 4em;
 }
+
 .grid-col-span-2 {
   grid-column: span 2;
   margin: auto;
 }
+
 .grid-col-span-2 p {
   padding-top: 1rem;
 }
+
 .project-desc {
   margin: 6em 0 15em 0;
 }
+
 .project-desc a {
   text-decoration: none;
   color: var(--clr-neutral-900);
 }
+
 .project-desc-two p,
 .project-desc-two h5 {
   text-align: end;
@@ -332,18 +381,38 @@ h2 a:hover {
   color: var(--clr-primary-400);
 }
 
+/*workshops page*/
+.workshops {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10rem;
+}
+
+.certificates-project-grid {
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 90%;
+}
+
+.certificate {
+  margin: auto;
+
+  max-width: 30rem;
+}
+
 /* Contact page */
 
 .contact-page-background .container {
-  background: linear-gradient(
-    to right,
-    #352e2a 0%,
-    #352e2a 50%,
-    #f8f4f0 50%,
-    #f8f4f0 100%
-  );
+  background: linear-gradient(to right,
+      #352e2a 0%,
+      #352e2a 50%,
+      #f8f4f0 50%,
+      #f8f4f0 100%);
   border: 6px var(--clr-neutral-900) solid;
 }
+
 .contact-page {
   margin: 5em auto;
   max-width: 80%;
@@ -352,16 +421,20 @@ h2 a:hover {
   align-items: center;
   grid-template-columns: repeat(auto-fill, 1fr);
 }
+
 .lets-talk {
   padding: 2rem;
 }
+
 .lets-talk h1 {
   color: var(--clr-neutral-100);
   font-size: clamp(6rem, 1rem + 8vw, 15rem);
 }
+
 .line {
   margin: 0 0.25em 0 0.25em;
 }
+
 .contact-text {
   margin: 3em 1em 1em 1em;
   color: var(--clr-neutral-100);
@@ -369,20 +442,24 @@ h2 a:hover {
   font-size: 4rem;
   line-height: 1.5em;
 }
+
 .contact-text p {
   text-align: end;
   letter-spacing: 0.5rem;
 }
+
 .say-hello {
   font-family: var(--ff-bold-primary);
   color: var(--clr-primary-400);
   text-transform: uppercase;
   font-size: 6rem;
 }
+
 .contact-details {
   margin: auto;
   padding-bottom: 2rem;
 }
+
 .contact-head {
   font-family: var(--ff-bold-primary);
   text-transform: uppercase;
@@ -390,16 +467,20 @@ h2 a:hover {
   text-decoration-color: var(--clr-primary-400);
   font-size: clamp(5rem, 1rem + 10vw, 9rem);
 }
+
 .email {
   margin-top: 12rem;
 }
+
 .contact a {
   text-decoration: none;
   color: var(--clr-neutral-900);
 }
+
 .phone {
   margin-top: 5rem;
 }
+
 .contact p {
   font-size: 3rem;
   margin-left: 0.2em;
@@ -412,28 +493,34 @@ footer {
   margin-top: 10em;
   background-color: var(--clr-neutral-200);
 }
+
 .base {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   max-width: 80%;
 }
+
 hr {
   border-top: 2px solid var(--clr-neutral-900);
   margin: auto;
 }
+
 .elle-footer {
   font-size: clamp(3rem, 1rem + 6vw, 7rem);
   font-family: var(--ff-serif);
   text-decoration: underline;
   text-decoration-color: var(--clr-primary-400);
 }
+
 .dot-footer {
   font-size: clamp(3rem, 1rem + 6vw, 7rem);
   font-family: var(--ff-serif);
 }
+
 #logo {
   max-width: 3.5rem;
 }
+
 .logos {
   margin: auto;
   max-width: 15rem;
@@ -448,23 +535,28 @@ hr {
   margin-top: auto;
   margin-left: auto;
 }
+
 .talk-footer a {
   text-decoration: none;
   color: var(--clr-neutral-900);
   font-size: 4rem;
 }
+
 .source-code {
   display: flex;
   justify-content: center;
 }
+
 .source-code p {
   padding-top: 0.5em;
   font-size: 1.5rem;
 }
+
 .git-link p {
   margin: auto;
   font-size: 1rem;
 }
+
 .git-link a {
   color: var(--clr-neutral-900);
   text-decoration: none;
@@ -482,9 +574,15 @@ hr {
   .project-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .certificates-project-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .contact-page {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   }
+
   .hero-three-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -498,30 +596,33 @@ hr {
 
 @media (max-width: 90em) {
   .contact-page-background .container {
-    background: linear-gradient(
-      to bottom,
-      #352e2a 0%,
-      #352e2a 50%,
-      #f8f4f0 50%,
-      #f8f4f0 100%
-    );
+    background: linear-gradient(to bottom,
+        #352e2a 0%,
+        #352e2a 50%,
+        #f8f4f0 50%,
+        #f8f4f0 100%);
   }
+
   .say-hello {
     font-size: 5rem;
   }
+
   .about-text p {
     margin: auto;
     padding: 0.5em;
     position: relative;
     left: 0em;
   }
+
   .deets {
     flex-direction: row;
     justify-content: center;
   }
+
   .deets p {
     font-size: 1.5rem;
   }
+
   h3 {
     text-align: center;
     position: relative;
@@ -529,13 +630,16 @@ hr {
 
     font-size: 3rem;
   }
+
   .lets-talk h1 {
     text-align: start;
   }
+
   .contact-page {
     grid-template-columns: 1fr;
     max-width: 90%;
   }
+
   .contact-details {
     margin: 0 auto;
     text-align: center;
@@ -548,42 +652,53 @@ hr {
   #project-img {
     max-width: 30rem;
   }
+
   .project-date {
     font-size: 1.5rem;
   }
+
   .project-grid {
     padding: 1em;
   }
+
   .margin {
     margin: 0;
   }
+
   .project-date {
     font-size: 2rem;
   }
+
   .project-img-grid {
     padding: 2rem 0 2rem 0;
     gap: 1rem;
     max-width: 90%;
   }
+
   .project-num-2 {
     grid-row: 1;
     grid-column: 3;
     text-align: end;
   }
+
   .contact-text {
     margin: 3rem 1rem 2rem 1rem;
   }
+
   .contact p {
     margin-left: 0;
     text-align: center;
   }
+
   h2 a {
     font-size: 10rem;
   }
+
   .project-header p {
     text-align: center;
     font-size: 2rem;
   }
+
   .img_title {
     font-size: 1.75rem;
   }
@@ -593,62 +708,79 @@ hr {
   h1 {
     text-align: center;
   }
+
   .footer-lets-talk {
     font-size: 3rem;
   }
+
   .im-elle {
     margin-top: 4em;
     display: flex;
     justify-content: center;
   }
+
   #project-img {
     max-width: 26em;
   }
+
   .project-img-grid {
     max-width: 95%;
   }
+
   .img-desc h2 {
     padding: 0.5rem;
   }
+
   .col-img {
     max-width: 28rem;
   }
+
   .project-date {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
+
   .project-num-2 {
     grid-row: 1;
     grid-column: 2;
     text-align: end;
   }
+
   p {
     font-size: 1.9rem;
   }
+
   .hey-hi-hello {
     padding-left: 0em;
   }
+
   .portfolio-banner p {
     font-size: 3rem;
     max-height: 3.2vh;
   }
+
   .home-text p {
     padding: 0;
     text-align: center;
     margin: 0;
   }
+
   .elle {
     margin-left: 0.2em;
   }
+
   .hero {
     margin-top: 3em;
   }
+
   .about-header {
     padding-top: 3em;
   }
+
   .hero-three-grid {
     margin: auto;
   }
+
   .contact-text {
     margin: 4rem 0 1rem 0;
   }
@@ -658,65 +790,84 @@ hr {
   .say-hello {
     font-size: 3.75rem;
   }
+
   .navbar-nav a {
     font-size: 1.5rem;
   }
+
   .navbar-brand a {
     font-size: 2rem;
   }
+
   h1 {
     text-align: center;
   }
+
   .im-elle {
     margin-top: 2em;
   }
+
   p {
     font-size: 1.5rem;
   }
+
   .im {
     font-size: 2em;
   }
+
   .about-header {
     padding-top: 8em;
   }
+
   .hero {
     margin-top: 1.25em;
     height: 40vh;
   }
+
   .portfolio-banner p {
     font-size: 2rem;
     max-height: 3vh;
   }
+
   .im-elle {
     margin-top: 4em;
     display: flex;
   }
+
   .deets p {
     font-size: 1.5rem;
   }
+
   .talk-footer a {
     font-size: 2rem;
   }
+
   .contact p {
     font-size: 1.75rem;
   }
+
   .lets-talk h1 {
     font-size: 5rem;
   }
+
   .lets-talk {
     padding: 0.5rem;
   }
 }
+
 @media (max-width: 20em) {
   .about-header {
     padding-top: 10em;
   }
+
   #go-to-about {
     margin-bottom: 5em;
   }
+
   .contact-text .hear-from {
     padding-bottom: 10rem;
   }
+
   .email {
     margin-top: 0;
   }
