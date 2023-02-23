@@ -304,7 +304,6 @@ a.hello:hover {
   padding: 2em 1em 1em 1em;
 }
 
-
 .img-desc h2 {
   display: flex;
   align-items: center;
@@ -363,7 +362,7 @@ h2 a:hover {
 }
 
 .project-desc {
-  margin: 6em 0 15em 0;
+  margin: 6em 0 10em 0;
 }
 
 .project-desc a {
@@ -382,11 +381,6 @@ h2 a:hover {
 }
 
 /*workshops page*/
-.workshops {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10rem;
-}
 
 .certificates-project-grid {
   display: grid;
@@ -395,21 +389,42 @@ h2 a:hover {
   gap: 4rem;
   max-width: 90%;
 }
-
 .certificate {
   margin: auto;
-
   max-width: 30rem;
+}
+
+.workshop-title {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+.courses h2 {
+  text-transform: uppercase;
+  font-size: 10rem;
+}
+.courses h3 {
+  font-family: var(--ff-bold-primary);
+  text-transform: uppercase;
+  position: inherit;
+}
+.courses p {
+  margin: 0rem 0rem 3rem 0rem;
+  font-family: var(--ff-serif);
+  text-align: center;
+  font-size: 2.5rem;
 }
 
 /* Contact page */
 
 .contact-page-background .container {
-  background: linear-gradient(to right,
-      #352e2a 0%,
-      #352e2a 50%,
-      #f8f4f0 50%,
-      #f8f4f0 100%);
+  background: linear-gradient(
+    to right,
+    #352e2a 0%,
+    #352e2a 50%,
+    #f8f4f0 50%,
+    #f8f4f0 100%
+  );
   border: 6px var(--clr-neutral-900) solid;
 }
 
@@ -596,11 +611,13 @@ hr {
 
 @media (max-width: 90em) {
   .contact-page-background .container {
-    background: linear-gradient(to bottom,
-        #352e2a 0%,
-        #352e2a 50%,
-        #f8f4f0 50%,
-        #f8f4f0 100%);
+    background: linear-gradient(
+      to bottom,
+      #352e2a 0%,
+      #352e2a 50%,
+      #f8f4f0 50%,
+      #f8f4f0 100%
+    );
   }
 
   .say-hello {
